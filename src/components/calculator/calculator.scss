@@ -7,6 +7,8 @@
 
   width: 50vw;
 
+  
+
   &__display {
     color: #fff;
     background: $grey;
@@ -18,15 +20,20 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       justify-items: stretch;
-      border: 1px solid red;
 
       button:last-child {
         background-color: $orange;
+        border-top: 0.5px solid $white;
       }
     }
 
     #zero {
       grid-column: span 2;
+    }
+
+    &-button {
+      background-color: $white;
+      border: 0.5px solid $grey;
     }
   }
 }
