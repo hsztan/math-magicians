@@ -1,17 +1,20 @@
-
-
 .calculator {
   $orange: #f5913f;
   $white: #e0e0e0;
   $grey: #858694;
 
-  width: 40vw;
+  width: 50vw;
   height: 40vw;
-  
 
   &__display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 0.25rem;
     color: #fff;
     background: $grey;
+    font-size: 0.7rem;
+    height: 6vw;
   }
 
   &__keypad {
@@ -39,6 +42,7 @@
     &-button {
       background-color: $white;
       border: 0.5px solid $grey;
+      font-size: 0.5rem;
     }
   }
 }
