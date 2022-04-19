@@ -1,4 +1,4 @@
-import './Calculator.css';
+import './calculator.scss';
 
 const Calculator = () => (
   <div className="calculator">
@@ -6,16 +6,16 @@ const Calculator = () => (
     <div className="calculator__keypad">
       <div className="calculator__keypad-row">
         <button type="button" className="calculator__keypad-button">
-          C
+          AC
         </button>
         <button type="button" className="calculator__keypad-button">
-          &larr;
+          +/-
         </button>
         <button type="button" className="calculator__keypad-button">
           %
         </button>
         <button type="button" className="calculator__keypad-button">
-          /
+          &divide;
         </button>
       </div>
       <div className="calculator__keypad-row">
@@ -29,7 +29,7 @@ const Calculator = () => (
           9
         </button>
         <button type="button" className="calculator__keypad-button">
-          *
+          &times;
         </button>
       </div>
       <div className="calculator__keypad-row">
@@ -61,7 +61,7 @@ const Calculator = () => (
         </button>
       </div>
       <div className="calculator__keypad-row">
-        <button type="button" className="calculator__keypad-button">
+        <button id="zero" type="button" className="calculator__keypad-button">
           0
         </button>
         <button type="button" className="calculator__keypad-button">

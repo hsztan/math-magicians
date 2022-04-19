@@ -1,0 +1,32 @@
+
+
+.calculator {
+  $orange: #f5913f;
+  $white: #e0e0e0;
+  $grey: #858694;
+
+  width: 50vw;
+
+  &__display {
+    color: #fff;
+    background: $grey;
+  }
+
+  &__keypad {
+    
+    &-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: stretch;
+      border: 1px solid red;
+
+      button:last-child {
+        background-color: $orange;
+      }
+    }
+
+    #zero {
+      grid-column: span 2;
+    }
+  }
+}
