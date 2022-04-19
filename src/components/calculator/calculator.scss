@@ -5,8 +5,8 @@
   $white: #e0e0e0;
   $grey: #858694;
 
-  width: 50vw;
-
+  width: 40vw;
+  height: 40vw;
   
 
   &__display {
@@ -15,11 +15,16 @@
   }
 
   &__keypad {
-    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
     &-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       justify-items: stretch;
+      flex: 1;
 
       button:last-child {
         background-color: $orange;
