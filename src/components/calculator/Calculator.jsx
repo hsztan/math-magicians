@@ -12,21 +12,27 @@ export default class Calculator extends React.PureComponent {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e) {
-    const { calcObj } = this.state;
-    const newCalcObj = calculate(calcObj, e.target.innerText);
-    if (e.target.innerText === '=' && newCalcObj.total) {
-      this.setState({ display: newCalcObj.total });
-    } else if (calcObj.operation && newCalcObj.next) {
-      this.setState({ display: newCalcObj.next });
-    } else if (newCalcObj.total && newCalcObj.operation) {
-      this.setState({ display: newCalcObj.total });
-    } else if (!newCalcObj.operation) {
-      this.setState({ display: newCalcObj.next });
+  handleDisplayState(beforeCalcObj, afterCalcObj) {
+    // Handle display UI state
+    if (!afterCalcObj.operation && !afterCalcObj.next && afterCalcObj.total) {
+      this.setState({ display: afterCalcObj.total });
+    } else if (beforeCalcObj.operation && afterCalcObj.next) {
+      this.setState({ display: afterCalcObj.next });
+    } else if (afterCalcObj.total && afterCalcObj.operation) {
+      this.setState({ display: afterCalcObj.total });
+    } else if (!afterCalcObj.operation) {
+      this.setState({ display: afterCalcObj.next });
     } else {
       this.setState({ display: 0 });
     }
+  }
+
+  handleClick(e) {
+    // Handle calculator logic state
+    const { calcObj } = this.state;
+    const newCalcObj = calculate(calcObj, e.target.innerText);
     this.setState({ calcObj: newCalcObj });
+    this.handleDisplayState(calcObj, newCalcObj);
   }
 
   render() {
