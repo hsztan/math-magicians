@@ -66,27 +66,27 @@ export default class Calculator extends React.PureComponent {
         </div>
         <div className="calculator__keypad">
           <div className="calculator__keypad-row">
-            {this.buttons.splice(0, 4).map((btn) => (
+            {this.buttons.slice(0, 4).map((btn) => (
               <Buttons key={btn} name={btn} handleClick={this.handleClick} />
             ))}
           </div>
           <div className="calculator__keypad-row">
-            {this.buttons.splice(0, 4).map((btn) => (
+            {this.buttons.slice(4, 8).map((btn) => (
               <Buttons key={btn} name={btn} handleClick={this.handleClick} />
             ))}
           </div>
           <div className="calculator__keypad-row">
-            {this.buttons.splice(0, 4).map((btn) => (
+            {this.buttons.slice(8, 12).map((btn) => (
               <Buttons key={btn} name={btn} handleClick={this.handleClick} />
             ))}
           </div>
           <div className="calculator__keypad-row">
-            {this.buttons.splice(0, 4).map((btn) => (
+            {this.buttons.slice(12, 16).map((btn) => (
               <Buttons key={btn} name={btn} handleClick={this.handleClick} />
             ))}
           </div>
           <div className="calculator__keypad-row">
-            {this.buttons.splice(0, 4).map((btn) => (
+            {this.buttons.slice(16, 19).map((btn) => (
               <Buttons key={btn} name={btn} handleClick={this.handleClick} />
             ))}
           </div>
