@@ -3,25 +3,27 @@ import calculate from './logic/calculate';
 import './calculator.scss';
 
 export default class Calculator extends React.PureComponent {
-  constructor() {
-    super();
-    this.state = { calcObj: { total: null, next: null, operation: null } };
+  constructor(props) {
+    super(props);
+    // this.state = { calcObj: { total: null, next: null, operation: null } };
+    this.calcObj = { total: null, next: null, operation: null };
     this.handleClick = this.handleClick.bind(this);
-    console.log(this.state);
   }
 
   // eslint-disable-next-line class-methods-use-this
   handleClick(e) {
-    const { calcObj } = this.state;
-    const newCalcObj = calculate(calcObj, e.target.innerText);
-    this.setState({ calcObj: newCalcObj });
+    console.log(e.target.innerText);
+    const newObj = calculate(this.calcObj, e.target.innerText);
+    console.log('newobj', newObj);
+    // const newCalcObj = calculate(calcObj, e.target.innerText);
+    // this.setState({ calcObj: newCalcObj });
   }
 
   render() {
-    const { calcObj } = this.state;
+    // const { calcObj } = this.state;
     return (
       <div className="calculator">
-        <div className="calculator__display">{calcObj.total}</div>
+        <div className="calculator__display">{0}</div>
         <div className="calculator__keypad">
           <div className="calculator__keypad-row">
             <button
