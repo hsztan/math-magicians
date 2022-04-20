@@ -6,6 +6,7 @@ export default class Buttons extends React.PureComponent {
     const { name, handleClick } = this.props;
     return (
       <button
+        id={name === '0' ? 'zero' : ''}
         onClick={handleClick}
         type="button"
         className="calculator__keypad-button"

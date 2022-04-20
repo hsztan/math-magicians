@@ -66,142 +66,29 @@ export default class Calculator extends React.PureComponent {
         </div>
         <div className="calculator__keypad">
           <div className="calculator__keypad-row">
-            <Buttons name="AC" handleClick={this.handleClick} />
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              +/-
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              %
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              ÷
-            </button>
+            {this.buttons.splice(0, 4).map((btn) => (
+              <Buttons key={btn} name={btn} handleClick={this.handleClick} />
+            ))}
           </div>
           <div className="calculator__keypad-row">
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              7
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              8
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              9
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              x
-            </button>
+            {this.buttons.splice(0, 4).map((btn) => (
+              <Buttons key={btn} name={btn} handleClick={this.handleClick} />
+            ))}
           </div>
           <div className="calculator__keypad-row">
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              4
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              5
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              6
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              -
-            </button>
+            {this.buttons.splice(0, 4).map((btn) => (
+              <Buttons key={btn} name={btn} handleClick={this.handleClick} />
+            ))}
           </div>
           <div className="calculator__keypad-row">
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              1
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              2
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              3
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              +
-            </button>
+            {this.buttons.splice(0, 4).map((btn) => (
+              <Buttons key={btn} name={btn} handleClick={this.handleClick} />
+            ))}
           </div>
           <div className="calculator__keypad-row">
-            <button
-              onClick={this.handleClick}
-              id="zero"
-              type="button"
-              className="calculator__keypad-button"
-            >
-              0
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              .
-            </button>
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              =
-            </button>
+            {this.buttons.splice(0, 4).map((btn) => (
+              <Buttons key={btn} name={btn} handleClick={this.handleClick} />
+            ))}
           </div>
         </div>
       </div>
