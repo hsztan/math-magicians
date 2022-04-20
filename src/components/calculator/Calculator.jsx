@@ -5,22 +5,37 @@ import './calculator.scss';
 export default class Calculator extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = { calcObj: { total: null, next: null, operation: null } };
+    this.state = {
+      calcObj: { total: null, next: null, operation: null },
+      display: null,
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  // eslint-disable-next-line class-methods-use-this
   handleClick(e) {
     const { calcObj } = this.state;
     const newCalcObj = calculate(calcObj, e.target.innerText);
+    if (e.target.innerText === '=' && newCalcObj.total) {
+      this.setState({ display: newCalcObj.total });
+    } else if (calcObj.operation && newCalcObj.next) {
+      this.setState({ display: newCalcObj.next });
+    } else if (newCalcObj.total && newCalcObj.operation) {
+      this.setState({ display: newCalcObj.total });
+    } else if (!newCalcObj.operation) {
+      this.setState({ display: newCalcObj.next });
+    } else {
+      this.setState({ display: 0 });
+    }
     this.setState({ calcObj: newCalcObj });
   }
 
   render() {
-    const { calcObj } = this.state;
+    const { display, calcObj } = this.state;
     return (
       <div className="calculator">
-        <div className="calculator__display">{calcObj.total}</div>
+        <div className="calculator__display">
+          {display ?? calcObj.next ?? 0}
+        </div>
         <div className="calculator__keypad">
           <div className="calculator__keypad-row">
             <button
