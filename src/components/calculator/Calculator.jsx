@@ -1,16 +1,34 @@
 import React from 'react';
 import calculate from './logic/calculate';
-import operate from './logic/operate';
 import './calculator.scss';
 
 export default class Calculator extends React.PureComponent {
+  constructor() {
+    super();
+    this.state = { calcObj: { total: null, next: null, operation: null } };
+    this.handleClick = this.handleClick.bind(this);
+    console.log(this.state);
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  handleClick(e) {
+    const { calcObj } = this.state;
+    const newCalcObj = calculate(calcObj, e.target.innerText);
+    this.setState({ calcObj: newCalcObj });
+  }
+
   render() {
+    const { calcObj } = this.state;
     return (
       <div className="calculator">
-        <div className="calculator__display">0</div>
+        <div className="calculator__display">{calcObj.total}</div>
         <div className="calculator__keypad">
           <div className="calculator__keypad-row">
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               AC
             </button>
             <button type="button" className="calculator__keypad-button">
