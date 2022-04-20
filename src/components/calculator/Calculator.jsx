@@ -5,25 +5,22 @@ import './calculator.scss';
 export default class Calculator extends React.PureComponent {
   constructor(props) {
     super(props);
-    // this.state = { calcObj: { total: null, next: null, operation: null } };
-    this.calcObj = { total: null, next: null, operation: null };
+    this.state = { calcObj: { total: null, next: null, operation: null } };
     this.handleClick = this.handleClick.bind(this);
   }
 
   // eslint-disable-next-line class-methods-use-this
   handleClick(e) {
-    console.log(e.target.innerText);
-    const newObj = calculate(this.calcObj, e.target.innerText);
-    console.log('newobj', newObj);
-    // const newCalcObj = calculate(calcObj, e.target.innerText);
-    // this.setState({ calcObj: newCalcObj });
+    const { calcObj } = this.state;
+    const newCalcObj = calculate(calcObj, e.target.innerText);
+    this.setState({ calcObj: newCalcObj });
   }
 
   render() {
-    // const { calcObj } = this.state;
+    const { calcObj } = this.state;
     return (
       <div className="calculator">
-        <div className="calculator__display">{0}</div>
+        <div className="calculator__display">{calcObj.total}</div>
         <div className="calculator__keypad">
           <div className="calculator__keypad-row">
             <button
@@ -33,70 +30,139 @@ export default class Calculator extends React.PureComponent {
             >
               AC
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               +/-
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               %
             </button>
-            <button type="button" className="calculator__keypad-button">
-              &divide;
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
+              ÷
             </button>
           </div>
           <div className="calculator__keypad-row">
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               7
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               8
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               9
             </button>
-            <button type="button" className="calculator__keypad-button">
-              &times;
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
+              x
             </button>
           </div>
           <div className="calculator__keypad-row">
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               4
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               5
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               6
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               -
             </button>
           </div>
           <div className="calculator__keypad-row">
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               1
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               2
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               3
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               +
             </button>
           </div>
           <div className="calculator__keypad-row">
             <button
+              onClick={this.handleClick}
               id="zero"
               type="button"
               className="calculator__keypad-button"
             >
               0
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               .
             </button>
-            <button type="button" className="calculator__keypad-button">
+            <button
+              onClick={this.handleClick}
+              type="button"
+              className="calculator__keypad-button"
+            >
               =
             </button>
           </div>
