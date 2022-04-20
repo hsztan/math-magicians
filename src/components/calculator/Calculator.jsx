@@ -1,4 +1,5 @@
 import React from 'react';
+import Buttons from '../buttons/buttons';
 import calculate from './logic/calculate';
 import './calculator.scss';
 
@@ -10,6 +11,27 @@ export default class Calculator extends React.PureComponent {
       display: null,
     };
     this.handleClick = this.handleClick.bind(this);
+    this.buttons = [
+      'AC',
+      '+/-',
+      '%',
+      '÷',
+      '7',
+      '8',
+      '9',
+      'x',
+      '4',
+      '5',
+      '6',
+      '-',
+      '1',
+      '2',
+      '3',
+      '+',
+      '0',
+      '.',
+      '=',
+    ];
   }
 
   handleDisplayState(beforeCalcObj, afterCalcObj) {
@@ -44,13 +66,7 @@ export default class Calculator extends React.PureComponent {
         </div>
         <div className="calculator__keypad">
           <div className="calculator__keypad-row">
-            <button
-              onClick={this.handleClick}
-              type="button"
-              className="calculator__keypad-button"
-            >
-              AC
-            </button>
+            <Buttons name="AC" handleClick={this.handleClick} />
             <button
               onClick={this.handleClick}
               type="button"
