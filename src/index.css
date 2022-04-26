@@ -1,5 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@400;500;600;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Anek Tamil', sans-serif;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.main-content {
+  padding: 2rem 2rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.main-content.calculator {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content.quote {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
