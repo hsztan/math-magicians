@@ -8,11 +8,13 @@ import Quote from './pages/Quote';
 const App = () => (
   <div className="App">
     <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/calculator" element={<CalculatorPage />} />
-      <Route path="/quote" element={<Quote />} />
-    </Routes>
+    <main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/calculator" element={<CalculatorPage />} />
+        <Route path="/quote" element={<Quote />} />
+      </Routes>
+    </main>
   </div>
 );
 
