@@ -1,3 +1,9 @@
-const CalculatorPage = () => <h1>This is The calculator</h1>;
+import Calculator from '../components/calculator/Calculator';
+
+const CalculatorPage = () => (
+  <div>
+    <Calculator />
+  </div>
+);
 
 export default CalculatorPage;
