@@ -50,7 +50,7 @@ const Calculator = () => {
 
   const handleClick = (e) => {
     // Handle calculator logic state
-    const newCalcObj = calculate(calcObj, e.target.innerText);
+    const newCalcObj = calculate(calcObj, e.target.innerHTML);
     setCalcObj(newCalcObj);
     handleDisplayState(calcObj, newCalcObj);
   };
