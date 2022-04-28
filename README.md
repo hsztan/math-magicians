@@ -11,6 +11,10 @@
 - Git
 - React
 
+## Live Version
+- [Heroku](https://math-magicians-hdev.herokuapp.com/)
+- [Netlify](https://math-magicians-hdev.netlify.app/)
+
 ## Setup
 
 In the project directory, you can run:
