@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pages renders correctly Calculator page renders correctly 1`] = `
+<div
+  className="main-content calculator"
+>
+  <div>
+    <h1>
+      Let's do some math!
+    </h1>
+  </div>
+  <div
+    className="calculator"
+  >
+    <div
+      className="calculator__display"
+    >
+      0
+    </div>
+    <div
+      className="calculator__keypad"
+    >
+      <div
+        className="calculator__keypad-row"
+      >
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          AC
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          +/-
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          %
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          ÷
+        </button>
+      </div>
+      <div
+        className="calculator__keypad-row"
+      >
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          7
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          8
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          9
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          x
+        </button>
+      </div>
+      <div
+        className="calculator__keypad-row"
+      >
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          4
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          5
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          6
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          -
+        </button>
+      </div>
+      <div
+        className="calculator__keypad-row"
+      >
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          1
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          2
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          3
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          +
+        </button>
+      </div>
+      <div
+        className="calculator__keypad-row"
+      >
+        <button
+          className="calculator__keypad-button"
+          id="zero"
+          onClick={[Function]}
+          type="button"
+        >
+          0
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          .
+        </button>
+        <button
+          className="calculator__keypad-button"
+          id=""
+          onClick={[Function]}
+          type="button"
+        >
+          =
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pages renders correctly Home page renders correctly 1`] = `
+<div
+  className="main-content"
+>
+  <h1>
+    Welcome to our page!
+  </h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, facilis excepturi. Accusantium nulla cupiditate voluptatem sapiente aliquid illo eum repellendus in quia modi laboriosam vel aperiam fugiat, sequi omnis hic.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur harum itaque ipsam perspiciatis, asperiores, magnam ex, qui temporibus dolorum nisi sequi sunt illo. Quidem libero vitae debitis laborum quod! Itaque.
+  </p>
+</div>
+`;
+
+exports[`Pages renders correctly Quote page renders correctly 1`] = `
+<div
+  className="main-content quote"
+>
+  <h1>
+    Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding. —William Paul Thurston
+  </h1>
+</div>
+`;

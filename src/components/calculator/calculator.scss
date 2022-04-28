@@ -1,0 +1,48 @@
+.calculator {
+  $orange: #f5913f;
+  $white: #e0e0e0;
+  $grey: #858694;
+
+  width: 50vw;
+  height: 40vw;
+
+  &__display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 0.25rem;
+    color: #fff;
+    background: $grey;
+    font-size: 0.7rem;
+    height: 6vw;
+  }
+
+  &__keypad {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    &-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: stretch;
+      flex: 1;
+
+      button:last-child {
+        background-color: $orange;
+        border-top: 0.5px solid $white;
+      }
+    }
+
+    #zero {
+      grid-column: span 2;
+    }
+
+    &-button {
+      background-color: $white;
+      border: 0.5px solid $grey;
+      font-size: 0.5rem;
+    }
+  }
+}
